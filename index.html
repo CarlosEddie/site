@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: #00B5A3;
+            color: #101300;
+            text-align: center;
+            margin: 0 auto;
+            padding: 16px;
+            border: 5px solid #111111;
+        }
+
+        main {
+            background-color: white;
+            color: #0E5B53;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        article {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        .autor-estilo {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Review de GPUs</h1>
+        <p>Esse blog tras noticias semanais sobre as GPUs mais recentes do mercado</p>
+    </header>
+    <main>
+        <article>
+            <div>
+                <h2>Meu primeiro review - RTX5090</h2>
+                <p>A RTX 5090 é daora mas os dlss5 é muito bagre</p>
+                <p class="autor-estilo">Autor: Um cara ai</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+            <img src="geforce-rtx-5090-learn-more-og-1200x630.jpg" alt="imagem da rtx 5090 com um fundo mesclando preto e verde">
+        </article>
+        <article>
+            <div>
+                <h2>Meu primeiro review - RTX5090</h2>
+                <p>A RTX 5090 é daora mas os dlss5 é muito bagre</p>
+                <p class="autor-estilo">Autor: Um cara ai</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+            <img src="geforce-rtx-5090-learn-more-og-1200x630.jpg" alt="imagem da rtx 5090 com um fundo mesclando preto e verde">
+        </article>
+        <article>
+            <div>
+                <h2>Meu primeiro review - RTX5090</h2>
+                <p>A RTX 5090 é daora mas os dlss5 é muito bagre</p>
+                <p class="autor-estilo">Autor: Um cara ai</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+            <img src="geforce-rtx-5090-learn-more-og-1200x630.jpg" alt="imagem da rtx 5090 com um fundo mesclando preto e verde">
+        </article>
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado)
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false) {
+                curtiu = true;
+                texto.textContent++;
+            } else {
+                curtiu = false;
+                texto.textContent--;
+            }
+        }
+    });
+</script>
+
+</html>
